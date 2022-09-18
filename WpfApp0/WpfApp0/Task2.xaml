@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp0.Task2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp0"
+        mc:Ignorable="d"
+        Title="Task2" Height="386" Width="450">
+    <Grid>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="40,34,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="№ школы" HorizontalAlignment="Left" Margin="5,58,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Оценки" HorizontalAlignment="Left" Margin="19,81,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="InputLastName" HorizontalAlignment="Left" Margin="75,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.483,1.333" TextChanged="InputLastName_TextChanged"/>
+        <TextBox x:Name="InputFirstName" HorizontalAlignment="Left" Margin="75,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.483,1.333" TextChanged="InputFirstName_TextChanged"/>
+        <TextBox x:Name="InputNumberSchool" HorizontalAlignment="Left" Margin="75,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.483,1.333" TextChanged="InputNumberSchool_TextChanged"/>
+        <TextBox x:Name="InputFirstMark" HorizontalAlignment="Left" Margin="75,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.483,1.333" TextChanged="InputFirstMark_TextChanged"/>
+        <TextBox x:Name="InputSecondMark" HorizontalAlignment="Left" Margin="110,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.483,1.333" TextChanged="InputSecondMark_TextChanged"/>
+        <Button x:Name="AddDataTask2" Content="Добавить" HorizontalAlignment="Left" Margin="138,125,0,0" VerticalAlignment="Top" Click="AddDataTask2_Click" RenderTransformOrigin="0.513,2.434"/>
+        <Button x:Name="BackMenuTask2" Content="Вернуться к меню" HorizontalAlignment="Left" Margin="15,125,0,0" VerticalAlignment="Top" Width="104" Click="BackMenuTask2_Click"/>
+        <ListView x:Name="ListViewTask2" Margin="13,166,29,36">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding LastName}" Width="110">Фамилия</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding FirstName}" Width="110">Имя</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding NumberSchool}" Width="80">№ Школы</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding FirstMark}" Width="50">Оценка</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding SecondMark}" Width="50">Оценка</GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="PreviewMouseLeftButtonDown" Handler="SelectItem" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label Content="№1" HorizontalAlignment="Left" Height="32" Margin="233,36,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label Content="№2" HorizontalAlignment="Left" Height="32" Margin="233,58,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.465,1.804"/>
+        <Label Content="№3" HorizontalAlignment="Left" Height="32" Margin="233,82,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.6,2.577"/>
+        <Label Content="№4" HorizontalAlignment="Left" Height="32" Margin="233,106,0,0" VerticalAlignment="Top" Width="35"/>
+        <Label Content="№5" HorizontalAlignment="Left" Height="32" Margin="233,129,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.566,-0.024"/>
+        <TextBlock x:Name="BestFromSchool1" HorizontalAlignment="Left" Height="16" Margin="268,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBlock x:Name="BestFromSchool2" HorizontalAlignment="Left" Height="16" Margin="268,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBlock x:Name="BestFromSchool3" HorizontalAlignment="Left" Height="16" Margin="268,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBlock x:Name="BestFromSchool4" HorizontalAlignment="Left" Height="16" Margin="268,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBlock x:Name="BestFromSchool5" HorizontalAlignment="Left" Height="16" Margin="268,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <Label Content="Лучшие ученики:" HorizontalAlignment="Left" Height="34" Margin="233,9,0,0" VerticalAlignment="Top" Width="140" FontSize="14" FontWeight="Bold"/>
+        <Label Content="удалить информацию об ученике можно двойным нажатием ПКМ" HorizontalAlignment="Left" Margin="30,334,0,0" VerticalAlignment="Top" FontSize="9" FontStyle="Italic"/>
+
+    </Grid>
+</Window>

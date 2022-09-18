@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp0.Task1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp0"
+        mc:Ignorable="d"
+        Title="Task1" Height="251" Width="531">
+    <Grid>
+        <Label Content="Автомобиль проехал расстояние S с реальной скоростью V." HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="460"/>
+        <Label Content="Однако во время движения потребовалось затратить время T на ремонт." HorizontalAlignment="Left" Height="26" Margin="10,21,0,0" VerticalAlignment="Top" Width="460"/>
+        <Label Content="Определить, с учетом ремонта, общее время движения и среднюю скорость автомобиля." HorizontalAlignment="Left" Height="26" Margin="10,33,0,0" VerticalAlignment="Top" Width="514"/>
+        <Label Content="Дано:" HorizontalAlignment="Left" Height="33" Margin="10,56,0,0" VerticalAlignment="Top" Width="58" FontSize="14" FontWeight="Bold"/>
+        <Label Content="S" HorizontalAlignment="Left" Height="34" Margin="10,86,0,0" VerticalAlignment="Top" Width="29" FontWeight="Bold"/>
+        <Label Content="V" HorizontalAlignment="Left" Height="34" Margin="10,116,0,0" VerticalAlignment="Top" Width="29" FontWeight="Bold"/>
+        <Label Content="T" HorizontalAlignment="Left" Height="34" Margin="10,146,0,0" VerticalAlignment="Top" Width="29" FontWeight="Bold"/>
+        <TextBox x:Name="InputDistance" HorizontalAlignment="Left" Margin="36,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="InputDistance_TextChanged"/>
+        <TextBox x:Name="InputSpeed" HorizontalAlignment="Left" Margin="36,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="InputSpeed_TextChanged"/>
+        <TextBox x:Name="InputTimeStop" HorizontalAlignment="Left" Margin="36,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="InputTimeStop_TextChanged"/>
+        <Button x:Name="RunTask1" Content="Начать" HorizontalAlignment="Left" Margin="68,190,0,0" VerticalAlignment="Top" Click="RunTask1_Click" RenderTransformOrigin="0.513,2.434"/>
+        <Button x:Name="BackMenuTask2" Content="Вернуться к меню" HorizontalAlignment="Left" Margin="402,190,0,0" VerticalAlignment="Top" Width="104" Click="BackMenuTask2_Click"/>
+        <Label Content="Решение:" HorizontalAlignment="Left" Height="33" Margin="208,56,0,0" VerticalAlignment="Top" Width="88" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Общее время движения:" HorizontalAlignment="Left" Height="34" Margin="208,86,0,0" VerticalAlignment="Top" Width="157" FontWeight="Bold"/>
+        <Label Content="Средняя скорость автомобиля:" HorizontalAlignment="Left" Height="34" Margin="208,116,0,0" VerticalAlignment="Top" Width="199" FontWeight="Bold"/>
+        <TextBlock x:Name="AllTimeOut" HorizontalAlignment="Left" Height="16" Margin="369,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBlock x:Name="AverageSpeedOut" HorizontalAlignment="Left" Height="16" Margin="407,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112"/>
+
+    </Grid>
+</Window>
